@@ -37,5 +37,7 @@ const canPlaceFlowers = function(flowerbed, n)
 const flowerbed1 = [1, 0, 0, 0, 1];
 const n1 = 1;
 console.log(canPlaceFlowers(flowerbed1, n1));
+console.log(typeof(flowerbed1));
+console.log(typeof(n1));
 
-
+console.log(flowerbed1);
