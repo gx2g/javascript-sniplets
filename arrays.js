@@ -4,6 +4,9 @@ const myArr = [];
 // indexing starts at 0, commas to separate them
 const myArr1 = [1, 2, 3, 4, 5]
 
+//              0, 1, 2, 3, 4
+
+
 // pulling out data from the array using [] brackets
 const thirdElement = myArr1[2]; // returns 3
 
@@ -34,6 +37,8 @@ let myArr3 = [1, 2, 3, 4, 5, 6]
 console.log("returns:", myArr3[3]) 
 
 
+
+console.log("================ Push() =====================");
 /* 
 
 Adding Elements - using push() method
