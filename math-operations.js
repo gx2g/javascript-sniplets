@@ -46,3 +46,21 @@ console.log(2 ** 7); // 2 * 2 * 2 * 2 * 2 * 2 * 2 (7 times) output: 128
 
 let g = 2, h = 3;
 console.log(g ** h); // 2 * 2 * 2 (3 times) output: 8
+
+// Priority of Execution of Operations
+
+console.log(25 + 7 * 2 ** 3);
+// 8 first, 56 second, then 25 + 56 = 81
+
+// note: if operators have same priority then execution will be from left to right
+// Parentheses () have the highest priority. Inner parentheses are evaluated first, followed by outer ones.
+
+console.log((25 + 7 ) * 2 ** 3);
+// 25 + 7 = 32, 2 ** 3 = 8, 32 * 8 = 256
+
+console.log(((25 + 7 ) * 2) ** 3);
+// 25 + 7 = 32, 32 * 2 = 64, 64 ** 3 = 
+
+let myVar = Math.pow(64, 3);
+
+console.log(myVar);
