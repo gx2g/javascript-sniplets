@@ -38,3 +38,11 @@ console.log(25 % 11); // output: 3
 
 let e = 27, f = 21;
 console.log(e % f); // output: 6
+
+// Exponent
+
+console.log(10 ** 6); // 10 * 10 * 10 * 10 * 10 * 10 (6 times) output: 1000000
+console.log(2 ** 7); // 2 * 2 * 2 * 2 * 2 * 2 * 2 (7 times) output: 128
+
+let g = 2, h = 3;
+console.log(g ** h); // 2 * 2 * 2 (3 times) output: 8
