@@ -109,13 +109,15 @@ We have three variables in this task: a = 33, b = 26, and c = "26". We will perf
 
 */
 
-let a = 33;
-let b = 26;
-let c = "26";
+console.log("============== TEST ================");
 
-console.log(a == b); // Task 1
-console.log(b === c); // Task 2
-console.log(a >= c); // Task 3
-console.log(b < c); // Task 4
-console.log(a > b && b == c); // Task 5
-console.log(a == b || c < a); // Task 6
+let userAge1 = 33;
+let userAge2 = 26;
+let userAge3 = "26";
+
+console.log(userAge1 == userAge2); // Task 1
+console.log(userAge2 === userAge3); // Task 2
+console.log(userAge1 >= userAge3); // Task 3
+console.log(userAge2 < userAge3); // Task 4
+console.log(userAge1 > userAge2 && userAge2 == userAge3); // Task 5
+console.log(userAge1 == userAge2 || userAge3 < userAge1); // Task 6
