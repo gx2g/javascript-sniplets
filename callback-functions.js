@@ -38,7 +38,7 @@ function doSomething(value) {
 doSomething("robert")
 
 function doSomething1(value) {
-    console.log("math calutation 10 * 20 = " + " " + value * 10)
+    console.log("math calcutation 10 * 20 = " + " " + value * 10)
 }
 doSomething1(20)
 
@@ -46,4 +46,36 @@ function doSomething2(value) {
     console.log("callback with .length function =" + " " + value.length)
 }
 doSomething2([1,2,3,4,5])
+
+// Different types of values can be passed through a function and as well as a function passed as an argument. 
+
+// Pass the function as an arugment
+
+// A callback function is a function that is passed as an argument to another function. 
+// Using a callback functions allows you to call a function from another function. 
+
+function doSomething3(value) {
+    value()
+}
+
+// passing function as argument
+doSomething3(function() {
+    console.log("Sup G!")
+})
+
+// another example
+
+function log(value) {
+    console.log(value)
+}
+
+function calculateSum(num1, num2, print) {
+    const sum = num1 + num2
+
+    print(sum)
+}
+
+calculateSum(10,20, log)
+
+
 
