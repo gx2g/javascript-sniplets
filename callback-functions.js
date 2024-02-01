@@ -33,7 +33,7 @@ logger1(message)
 // Other Examples of Callback Functions
 
 function doSomething(value) {
-    console.log("convert txt to uppercase" + " " + value.toUpperCase()
+    console.log("convert txt to uppercase" + " " + value.toUpperCase())
 }
 doSomething("robert")
 
