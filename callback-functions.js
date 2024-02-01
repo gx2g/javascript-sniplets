@@ -30,10 +30,23 @@ function logger1(message) {
 logger1(message)
 
 
-// Other Examples
+// Other Examples of Callback Functions
 function doSomething(value) {
-    console.log(value.toUpperCase())
+    console.log("convert txt to uppercase" + " " + value.toUpperCase())
 
 }
 
 doSomething("robert")
+
+function doSomething1(value) {
+    console.log("math calutation 10 * 20 = " + " " + value * 10)
+}
+
+doSomething1(20)
+
+function doSomething2(value) {
+    console.log("callback with .length function =" + " " + value.length)
+}
+
+doSomething2([1,2,3,4,5])
+
