@@ -31,6 +31,7 @@ logger1(message)
 
 
 // Other Examples of Callback Functions
+// when you declare a function you can specify any argument that function can accept
 
 function doSomething(value) {
     console.log("convert txt to uppercase" + " " + value.toUpperCase())
