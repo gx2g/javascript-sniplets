@@ -51,3 +51,16 @@ if (oranges > 2 && apples > 2) {
 }
 
 console.log(oranges, apples, fruit);
+
+
+let gameScore = 199;
+
+if(gameScore >= 100){
+    console.log("greater then = 100")
+} else if (gameScore >= 101) {
+    console.log("first else if statement")
+} else if (gameScore >= 800) {
+    console.log("last else if statement")
+} else {
+    console.log("root else statement")
+}
