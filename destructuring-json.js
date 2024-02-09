@@ -49,9 +49,11 @@ let workerName = {
 }
 
 let {
-    employeeName: workerID = "Bob Fuegos", // new variable assignment workerID
+    employeeName: workerID = "doesn't matter, can't reassign const", // new variable assignment workerID
     workerSkill: workerTitle = "fire starter" // default new variable assignment workerTitle
 } = workerName
 
 console.log(workerID);
 console.log(workerTitle);
+
+console.log("Employee Name: " + workerID + " Employee Skill: " + workerTitle)
