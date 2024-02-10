@@ -1,0 +1,2 @@
+Random text information from a txt file being read by fs function from node js. 
+
