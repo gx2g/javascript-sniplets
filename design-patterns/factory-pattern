@@ -31,7 +31,6 @@ function tester(name) {
 
 }
 
-
 function EmployeeFactory() {
     this.create = (name, type) => {
         switch(type) 
@@ -55,7 +54,8 @@ const companyEmployee = new EmployeeFactory()
 const employees = []
 
 employees.push(companyEmployee.create("Bob Fuegos", 1))
-employees.push(companyEmployee.create("Roberto Bob", 2))
+employees.push(companyEmployee.create("Somantha Fuegos", 2))
+
 
 employees.forEach( emp => {
     say.call(emp)
