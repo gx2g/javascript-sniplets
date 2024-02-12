@@ -16,17 +16,20 @@ keeping your code clean
 
 */ 
 
-function developer(name) {
+function developer(name, gender) {
     this.name = name
+    this.gender = gender
     this.type = "Developer"
 
 }
 
-function tester(name) {
+function tester(name, gender) {
     this.name = name
+    this.gender = gender
     this.type = "Tester"
 
 }
+
 
 function EmployeeFactory() {
     this.create = (name, type) => {
@@ -43,15 +46,15 @@ function EmployeeFactory() {
 }
 
 function say(){
-    console.log("Employee Name:" + " " + this.name + " " + "Job Title:" + " " + this.type)
+    console.log("Employee Name:" + " " + this.name + " - " + "Job Title:" + " " + this.type)
 }
 
 
-const employeeFactory = new EmployeeFactory()
+const companyEmployee = new EmployeeFactory()
 const employees = []
 
-employees.push(employeeFactory.create("Bob Fuegos", 1))
-employees.push(employeeFactory.create("Roberto Bob", 2))
+employees.push(companyEmployee.create("Bob Fuegos", 1))
+employees.push(companyEmployee.create("Roberto Bob", 2))
 
 employees.forEach( emp => {
     say.call(emp)
