@@ -1,0 +1,58 @@
+/* 
+
+(creational catagory)
+
+object creation mecanisms that promote flexablity and reusablity 
+of your code in situations where you have to create many different 
+types and many different objects
+
+Factory Pattern - An Object that creates for manufactors different Objects
+Allowing to handle all creation in a centeralized location. 
+
+don't have to keep using new object, making the code ugly 
+through out your code. 
+
+keeping your code clean
+
+*/ 
+
+function developer(name) {
+    this.name = name
+    this.type = "Developer"
+
+}
+
+function tester(name) {
+    this.name = name
+    this.type = "Tester"
+
+}
+
+function EmployeeFactory() {
+    this.create = (name, type) => {
+        switch(type) 
+        {
+            case 1:
+                return new developer(name)
+                break;
+            case 2:
+                return new tester(name)
+                break;
+        }
+    }
+}
+
+function say(){
+    console.log("Employee Name:" + " " + this.name + " " + "Job Title:" + " " + this.type)
+}
+
+
+const employeeFactory = new EmployeeFactory()
+const employees = []
+
+employees.push(employeeFactory.create("Bob Fuegos", 1))
+employees.push(employeeFactory.create("Roberto Bob", 2))
+
+employees.forEach( emp => {
+    say.call(emp)
+})
