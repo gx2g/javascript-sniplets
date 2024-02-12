@@ -1,4 +1,5 @@
 /* 
+https://www.youtube.com/watch?v=kuirGzhGhyw&list=PLFKDYTlP3abzwWleHq1WHcKyi8nCPY74s
 
 (creational catagory)
 
@@ -21,6 +22,8 @@ function developer(name) {
     this.type = "Developer"
 
 }
+
+//console.log(developer("Bobbo"))
 
 function tester(name) {
     this.name = name
