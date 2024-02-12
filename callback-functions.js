@@ -36,17 +36,17 @@ logger1(message)
 function doSomething(value) {
     console.log("convert txt to uppercase" + " " + value.toUpperCase())
 }
-doSomething("robert")
+doSomething("robert") // string argument
 
 function doSomething1(value) {
     console.log("math calcutation 10 * 20 = " + " " + value * 10)
 }
-doSomething1(20)
+doSomething1(20) // number
 
 function doSomething2(value) {
     console.log("callback with .length function =" + " " + value.length)
 }
-doSomething2([1,2,3,4,5])
+doSomething2([1,2,3,4,5]) // array
 
 // Different types of values can be passed through a function and as well as a function passed as an argument. 
 
@@ -67,7 +67,7 @@ doSomething3(function() {
 // another example
 
 function log(value) {
-    console.log(value)
+    console.log(value) // just logs the value that is passed to it. 
 }
 
 function calculateSum(num1, num2, print) {
@@ -77,6 +77,3 @@ function calculateSum(num1, num2, print) {
 }
 
 calculateSum(10,20, log)
-
-
-
