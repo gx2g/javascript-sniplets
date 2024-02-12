@@ -14,4 +14,14 @@ console.log(price); // output: 350
 
 // const was introduced in ES6
 const myName = 'Gilberto';
-console.log(myName);
+console.log(myName); // output: Gilberto
+
+// can't reassign const variable, you will get a TypeError
+
+// const value must be assigned when declared. 
+
+// if you try to declare a const variable without a value you'll get a SyntaxError
+
+
+
+
