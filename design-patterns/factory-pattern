@@ -16,17 +16,15 @@ keeping your code clean
 
 */ 
 
-function developer(name, gender) {
+function developer(name) {
     this.name = name
-    this.gender = gender
     this.type = "Developer"
 
 }
 
-function tester(name, gender) {
+function tester(name) {
     this.name = name
-    this.gender = gender
-    this.type = "Tester"
+     this.type = "Tester"
 
 }
 
