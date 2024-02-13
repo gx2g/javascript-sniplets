@@ -95,6 +95,25 @@ if(gameScore >= 1000){
 
 // play around with the numbers to get different condition statements
 
+
+let season = 'summer';
+
+if (season === 'spring') {
+  console.log('It\'s spring! The trees are budding!');
+  } else if (season === 'winter'){
+      console.log('It\'s winter! Everything is covered in snow.')
+  } else if (season === 'fall'){
+      console.log('It\'s fall! Leaves are falling!')
+  } else if (season === 'summer'){
+      console.log('It\'s sunny and warm because it\'s summer!')
+  } else {
+  console.log('Invalid season.');
+}
+
+
+
+
+
 /*
 When using the && operator, both conditions must evaluate to true for the 
 entire condition to evaluate to true and execute. Otherwise, if either 
@@ -236,10 +255,57 @@ to as short-circuit evaluation.
 
 // short circit evaluation
 
-let tool = ''; // falsy if empty strings, assign marker to it and test 
+let tool = ''; 
+// falsy if empty strings, assign marker to it and test 
+// tool = 'marker'
 
 // Use short circuit evaluation to assign  writingUtensil variable below:
 let writingUtensil // = tool || 'pen' // Also, falsy if undeclared 
 
 // prints pin which means pin is assigned to the left
 console.log(`The ${writingUtensil} is mightier than the sword.`);
+
+/*
+
+Ternary Operator
+
+In the spirit of using short-hand syntax, we can use a ternary operator 
+to simplify an if...else statement.
+
+Take a look at the if...else statement example:
+
+*/
+
+let isNightTime = true;
+
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+/*
+
+The condition, isNightTime, is provided before the ?.
+Two expressions follow the ? and are separated by a colon :.
+If the condition evaluates to true, the first expression executes.
+If the condition evaluates to false, the second expression executes.
+
+Like if...else statements, ternary operators can be used for conditions 
+which evaluate to true or false.
+
+*/
+
+let isLocked = false;
+
+isLocked ? console.log('You will need a key to open the door.') : console.log('You will not need a key to open the door.');
+
+let isCorrect = true;
+
+isCorrect ? console.log('Correct!') : console.log('Incorrect!');
+
+let favoritePhrase1 = 'Love That!';
+
+favoritePhrase1 === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
