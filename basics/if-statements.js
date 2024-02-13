@@ -183,5 +183,63 @@ null which represent when there is no value at all
 undefined which represent when a declared variable lacks a value
 NaN, or Not a Number
 
+Truthy and Falsy Assignment
+
+Truthy and falsy evaluations open a world of short-hand possibilities!
+
+Say you have a website and want to take a user’s username to make a 
+personalized greeting. Sometimes, the user does not have an account, 
+making the username variable falsy. The code below checks if username 
+is defined and assigns a default string if it is not:
 
 */
+
+let userName = '';
+let defaultName;
+
+if(userName){
+  defaultName = userName
+} else {
+  defaultName = 'Create User Name'
+}
+
+console.log(defaultName) // prints: Create User Name
+
+/*
+
+If you combine your knowledge of logical operators you can use a 
+short-hand for the code above. In a boolean condition, JavaScript 
+assigns the truthy value to a variable if you use the || operator 
+in your assignment:
+
+*/
+
+// play with && and || to determine behavior 
+let userName1 = '';
+let defaultName1 = userName1 || 'Truthy String';
+
+if(defaultName1){
+  console.log(defaultName1);
+} else {
+  console.log('Falsy')
+}
+
+/*
+
+Because || or statements check the left-hand condition first, 
+the variable defaultName will be assigned the actual value of 
+username if it is truthy, and it will be assigned the value 
+of 'Stranger' if username is falsy. This concept is also referred 
+to as short-circuit evaluation.
+
+*/
+
+// short circit evaluation
+
+let tool = ''; // falsy if empty strings, assign marker to it and test 
+
+// Use short circuit evaluation to assign  writingUtensil variable below:
+let writingUtensil // = tool || 'pen' // Also, falsy if undeclared 
+
+// prints pin which means pin is assigned to the left
+console.log(`The ${writingUtensil} is mightier than the sword.`);
