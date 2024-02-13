@@ -1,4 +1,4 @@
-// STUDY https://www.w3schools.com/jsref/jsref_obj_promise.asp
+// STUDY https://www.w3schools.com/jsref/
 
 
 // There are built in objects in JS. 
