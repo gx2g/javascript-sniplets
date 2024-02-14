@@ -93,3 +93,13 @@ In this comparison, the for loop is more straightforward and occupies less code 
 Additionally, the for loop automatically clears the counter variable (in this case, i) after execution.
 
 */
+
+// keep in mind
+
+// global scope inside for loop printed 5 times
+let tiger = "Tiger";
+
+// forVar can be named anything it's just Counter initialization
+for (let forVar = 0; forVar < 5; forVar++) {
+  console.log(tiger);
+};
