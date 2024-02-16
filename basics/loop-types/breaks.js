@@ -37,6 +37,9 @@ i = 0   a = 0 + 0
 i = 1	a = 0 + 1
 i = 2	a = 1 + 2
 i = 3	a = 3 + 3
-i = 4	a = 6 + 4, break
+i = 4	a = 6 + 4  four is greater then 3 so we break 
+
+if i greater then 3
+break
 
 */
