@@ -34,8 +34,6 @@ if (userLikes < 0) {
 }
 
 
-
-
 let oranges = 5
 let apples = 3
 let fruit // variable no assignment
@@ -54,7 +52,7 @@ console.log(oranges, apples, fruit)
 
 
 
-// Multiple Conditions
+// more Multiple Conditions
 
 let cardPlayer1 = 11
 
@@ -75,8 +73,10 @@ if (cardPlayer1 > 0) {
 }
 
 /* 
+
 in this senerio we have multiple true statements, 
 may not be the output we want. maybe we want to run only one statement
+
 */
 
 
@@ -110,11 +110,8 @@ if (season === 'spring') {
   console.log('Invalid season.');
 }
 
-
-
-
-
 /*
+
 When using the && operator, both conditions must evaluate to true for the 
 entire condition to evaluate to true and execute. Otherwise, if either 
 condition is false, the && condition will evaluate to false and the 
@@ -309,3 +306,57 @@ isCorrect ? console.log('Correct!') : console.log('Incorrect!');
 let favoritePhrase1 = 'Love That!';
 
 favoritePhrase1 === 'Love That!' ? console.log('I love that!') : console.log("I don't love that!");
+
+
+
+/*
+
+The switch keyword
+
+else if statements are a great tool if we need to check multiple 
+conditions. In programming, we often find ourselves needing to 
+check multiple values and handling each of them differently
+
+
+*/
+
+let groceryItem = 'papaya';
+
+if (groceryItem === 'tomato') {
+  console.log('Tomatoes are $0.49');
+} else if (groceryItem === 'papaya'){
+  console.log('Papayas are $1.29');
+} else {
+  console.log('Invalid item');
+}
+
+/*
+
+In the code above, we have a series of conditions checking for a 
+value that matches a groceryItem variable. Our code works fine, but 
+imagine if we needed to check 100 different values! Having to 
+write that many else if statements sounds like a pain!
+
+A switch statement provides an alternative syntax that is easier 
+to read and write. A switch statement looks like this:
+
+*/
+
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
+
+// Prints 'Papayas are $1.29'
