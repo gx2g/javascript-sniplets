@@ -342,9 +342,9 @@ to read and write. A switch statement looks like this:
 
 */
 
-let groceryItem = 'papaya';
+let groceryItem1 = 'papaya';
 
-switch (groceryItem) {
+switch (groceryItem1) {
   case 'tomato':
     console.log('Tomatoes are $0.49');
     break;
