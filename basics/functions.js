@@ -100,3 +100,14 @@ function func(arg) {
   func(2521);
   func("Rabbit");
   func(true);
+
+
+  // my name function
+
+  function myName(name) {
+    console.log("My name is", name);
+  };
+  
+  myName("Bob");
+  myName("Robi");
+  myName("Roberto");
