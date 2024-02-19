@@ -28,7 +28,6 @@ function developer(name) {
 function tester(name) {
     this.name = name
      this.type = "Tester"
-
 }
 
 function EmployeeFactory() {
@@ -55,7 +54,6 @@ const employees = []
 
 employees.push(companyEmployee.create("Bob Fuegos", 1))
 employees.push(companyEmployee.create("Somantha Fuegos", 2))
-
 
 employees.forEach( emp => {
     say.call(emp)
