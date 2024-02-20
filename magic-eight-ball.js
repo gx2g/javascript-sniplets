@@ -1,4 +1,4 @@
-let userName = '';
+let userName = ''; // I like to call this falsy cause it's empty string
 
 // if the user doesn't enter a name, the condition userName ? will evaluate to false because it will be an empty string
 userName ? console.log('Hello, ${userName}!') : console.log('Hello!');
