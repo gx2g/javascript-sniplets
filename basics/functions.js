@@ -111,3 +111,17 @@ function func(arg) {
   myName("Bob");
   myName("Robi");
   myName("Roberto");
+
+  // Arguments in the function
+
+  // Arguments are function variables that you can use only inside the function:
+
+  let data1 = ""
+  function thisFunc(data1, data2) {
+    console.log("inside Func Arg A = ", typeof(data1));
+    console.log("inside Func Arg b = ", data2);
+  };
+
+  thisFunc(8, 24);
+
+  console.log("Global data1 = ", typeof(data1));
