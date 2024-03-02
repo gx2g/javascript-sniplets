@@ -23,7 +23,7 @@ function developer(name) {
 
 }
 
-//console.log(developer("Bobbo"))
+// console.log(developer("Bobbo"))
 
 function tester(name) {
     this.name = name
