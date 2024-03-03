@@ -8,17 +8,18 @@ Here's a basic example of an object constructor:
 */
 
 // Object constructor function
-function Person(name, age) {
+function Person(name, age, title) {
     this.name = name;
     this.age = age;
+    this.title = title;
 }
 
 // Creating objects using the constructor function
-let person1 = new Person('Jason', 22);
-let person2 = new Person('Gina', 25);
+let person1 = new Person('Jason', 22, 'Developer');
+let person2 = new Person('Gina', 25, 'Tester');
 
-console.log(person1); // Output: Person { name: 'Jason', age: 22 }
-console.log(person2); // Output: Person { name: 'Gina', age: 25 }
+console.log(person1); // Output: Person { name: 'Jason', age: 22, title: Developer }
+console.log(person2); // Output: Person { name: 'Gina', age: 25, title: Tester }
 
 /*
 
