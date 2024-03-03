@@ -44,4 +44,71 @@ then you only need to omit the get methods like getName(), getAge() etc.
 Easy to reuse: 
 With encapsulation, it's easy to change and adapt to new requirements
 
+Strategy Pattern allows you to swap strategies in and out for each other. 
+All a Strategy is, is functions.
+
+Example: Lets create a program that gives us different shipping costs using strategies.
+
+
 */
+
+function FedexFirstClass ()
+{
+    this.calculate = package=>{
+        // Fedex tax calulations goes here
+        return 2.50
+    }
+}
+
+function UpsGroundShipping ()
+{
+    this.calculate = package=>{
+        // UPS tax calulations goes here
+        return 1.45
+    }
+}
+
+
+function AmazonNextDay()
+{
+    this.calculate = package=>{
+        // Amazon Next Day tax calulations goes here
+        return 6.99
+    }
+}
+
+function Shipping() 
+{
+    this.company = ""
+    this.setStrategy = (company)=> {
+        this.company = company
+    }
+    this.calculate = package=> {
+        return this.company.calculate(package)
+    }
+}
+
+// create instances of each function
+const fedex = new FedexFirstClass()
+const ups = new UpsGroundShipping()
+const amazon = new AmazonNextDay()
+
+
+const package = { from: 'California', to: 'Arazona', weight: 1.0 }
+
+// console.log(fedex)
+// console.log(ups)
+// console.log(amazon)
+
+
+// create an instance of shipping
+const shipping = new Shipping()
+
+shipping.setStrategy(fedex)
+console.log("Fedex: " + shipping.calculate(package))
+
+shipping.setStrategy(ups)
+console.log("UPS: " + shipping.calculate(package))
+
+shipping.setStrategy(amazon)
+console.log("Amazon: " + shipping.calculate(package))
