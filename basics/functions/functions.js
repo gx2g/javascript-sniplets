@@ -82,17 +82,17 @@ console.log(square1(4)); // 16
 /* 
 
  better to give the function a name so you can refer to itself and
- it's easier to see in debuggers 
+ it's easier to see in debuggers stack traces.
 
  */
 
 const factorial = function fac(n) {
-  // 3 * 3 is 3, 3 times 3 + 3 + 3
   // n * fac(n - 1) is taking away one of the 3's
   return n < 2 ? 1 : n * fac(n - 1);
 }
-console.log(factorial(3));
-console.log(factorial(2));
+console.log(factorial(10)); // 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 3,628,800
+console.log(factorial(3)); // 3 * 2 * 1 = 6
+console.log(factorial(2)); // 2 isn't less then so 2 * 1 = 2
 
 
 
