@@ -87,13 +87,12 @@ console.log(square1(4)); // 16
  */
 
 const factorial = function fac(n) {
-  // 3 * 3 is 3 + 3 + 3
+  // 3 * 3 is 3, 3 times 3 + 3 + 3
   // n * fac(n - 1) is taking away one of the 3's
   return n < 2 ? 1 : n * fac(n - 1);
 }
 console.log(factorial(3));
 console.log(factorial(2));
-console.log(factorial(10));
 
 
 
