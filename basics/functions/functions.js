@@ -87,7 +87,6 @@ console.log(square1(4)); // 16
  */
 
 const factorial = function fac(n) {
-  // n * fac(n - 1) is taking away one of the 3's
   return n < 2 ? 1 : n * fac(n - 1);
 }
 console.log(factorial(10)); // 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 3,628,800
@@ -95,7 +94,20 @@ console.log(factorial(3)); // 3 * 2 * 1 = 6
 console.log(factorial(2)); // 2 isn't less then so 2 * 1 = 2
 
 
+function map(f, a){
+  const result= new Array(a.length);
+  for (i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
+  }
+}
 
+const cube = function(x) {
+  return x * x * x;
+};
+
+const cubeNums = {0, 1, 2, 5, 10};
+
+console.log(map(cube, cubeNums));
 
 // old way of doing functions
 var greeting = function(){
