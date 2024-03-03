@@ -1,3 +1,103 @@
+/*
+
+Functions are frist class objects, because they can be passed from other functions
+Can be assigned to variables and other properties. They can also have properties and methods
+just like other objects. 
+
+What distinguishes them from other objects is that functions can be called.
+
+Function values are typically instances of Function.
+
+properties and methods of Function objects. Callable values cause typeof to 
+return "function" instead of "object".
+
+
+
+*/
+
+// function declaration 
+function square(myNum) {
+  return myNum * myNum;
+}
+
+/*
+ 
+ Parameters are essentially passed to functions by value
+ 
+ When you pass an object as a parameter, if the function changes 
+ the object's properties, that change is visible outside the 
+ function, as shown in the following example:
+ 
+ */
+function carDealer(theObject) {
+  theObject.make = "Chevy";
+}
+
+// create an object
+const myCar = {
+  make: "chevolete",
+  model: "belair",
+  year: "1954",
+};
+
+// console log object make value global scope
+console.log(myCar.make); // chevolette
+
+// call function myCar make value function scope
+carDealer(myCar); // call function
+
+// Call myCar make and noticed value has changed
+console.log(myCar.make); // Chevy
+
+
+/*
+
+When you pass an array as a parameter, if the function changes 
+any of the array's values, that change is visible outside the function
+
+*/
+
+function myScores (scores) {
+  scores[0] = 30;
+}
+
+const scores = [45];
+
+console.log(scores[0]);
+myScores(scores);
+console.log(scores[0]);
+
+/*
+
+Function Expression -  can be anonymous;
+
+*/
+// declare a variable = to a function expression
+const square1 = function (myNum) {
+  return myNum * myNum;
+};
+
+console.log(square1(4)); // 16
+
+/* 
+
+ better to give the function a name so you can refer to itself and
+ it's easier to see in debuggers 
+
+ */
+
+const factorial = function fac(n) {
+  // 3 * 3 is 3 + 3 + 3
+  // n * fac(n - 1) is taking away one of the 3's
+  return n < 2 ? 1 : n * fac(n - 1);
+}
+console.log(factorial(3));
+console.log(factorial(2));
+console.log(factorial(10));
+
+
+
+
 // old way of doing functions
 var greeting = function(){
     console.log('Old Function - Hello World');
