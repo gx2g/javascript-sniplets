@@ -93,21 +93,36 @@ console.log(factorial(10)); // 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 3,628,80
 console.log(factorial(3)); // 3 * 2 * 1 = 6
 console.log(factorial(2)); // 2 isn't less then so 2 * 1 = 2
 
+/*
 
+Function expressions are convenient when passing a function as an argument 
+to another function. The following example shows a map function that should 
+receive a function as first argument and an array as second argument:
+
+In the following code, the function receives a function defined by a function 
+expression and executes it for every element of the array received as a 
+second argument:
+
+*/
 function map(f, a){
-  const result= new Array(a.length);
+  const result = new Array(a.length);
+  
   for (i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
   }
+  
+  return result;
 }
 
 const cube = function(x) {
   return x * x * x;
 };
 
-const cubeNums = {0, 1, 2, 5, 10};
-
+const cubeNums = [0, 1, 2, 5, 10];
 console.log(map(cube, cubeNums));
+
+
+/* ******************************************************** */
 
 // old way of doing functions
 var greeting = function(){
