@@ -155,3 +155,63 @@ const informationCard = {
   console.log(userShippingInfo.address.postalCode); // not notation
   console.log(userShippingInfo["address"]["postalCode"]); // square notation
   
+/* 
+
+Practice accessing object properties
+
+*/
+
+  const user = {
+    name: "Sarah",
+    age: 32,
+    hobbies: {
+      outdoor: "hiking",
+      indoor: "painting",
+    },
+    preferences: {
+      music: "jazz",
+      movieGenre: "sci-fi",
+    },
+  };
+  // Task 1
+  console.log(user.name); // person's name
+  
+  // Task 2
+  console.log(user.hobbies.indoor); // indoor hobby
+  
+  // Task 3
+  const userAge = user.age;
+  console.log(userAge); // person's age
+  
+  // Task 4
+  console.log(user.preferences.music); // music genre
+  
+
+  /*
+  
+  Important concepts when working with Objects
+    - modifying property values;
+    - adding new properties;
+    - using shorthand properties;
+  
+  */
+
+// Modifying Property Values
+
+myCompany = {
+
+    title: "Bob Code",
+    industry: "Sales",
+    founded: {
+        year: 1988,
+        month: "August",
+        day: "29th"
+    }
+};
+
+myCompany.title = "Code Bobby"; // modifying object property
+console.log(myCompany.title);
+myCompany.industry = "Engineer"; // modifying object property
+console.log(myCompany.industry);
+
+console.log(typeof(myCompany.founded.year));
