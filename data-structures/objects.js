@@ -60,3 +60,27 @@ const classicCar = {
 console.log(classicCar.make);
 console.log(classicCar["type@"]);
 console.log(classicCar._tires);
+
+/*
+
+Nested Properties
+
+*/
+
+const computer = {
+    brand: "Apple",
+    model: "Macbook Pro",
+    specifications: {
+        processor: "M2",
+        memory: "16GB RAM",
+        storage: "512GB SSD",
+    },
+    owner: {
+        name: "Rob",
+        username:"Robster123",
+
+    }
+};
+
+console.log(computer.brand);
+console.log(computer.specifications.processor)
