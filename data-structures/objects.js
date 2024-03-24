@@ -152,7 +152,7 @@ const informationCard = {
     },
   };
 
-  console.log(userShippingInfo.address.postalCode); // not notation
+  console.log(userShippingInfo.address.postalCode); // dot notation
   console.log(userShippingInfo["address"]["postalCode"]); // square notation
   
 /* 
@@ -198,15 +198,21 @@ Practice accessing object properties
 
 // Modifying Property Values
 
+
+const race = "Hispanic";
+const sex = "Male";
+
 myCompany = {
 
     title: "Bob Code",
     industry: "Sales",
     founded: {
         year: 1988,
-        month: "August",
+        month: "July",
         day: "29th"
-    }
+    },
+    race: race,
+    sex: sex,
 };
 
 myCompany.title = "Code Bobby"; // modifying object property
@@ -215,3 +221,22 @@ myCompany.industry = "Engineer"; // modifying object property
 console.log(myCompany.industry);
 
 console.log(typeof(myCompany.founded.year));
+
+// Adding Property Values
+
+myCompany.founder = "Bob Fuegos";
+console.log(myCompany.founder);
+
+// Short hand code for adding values to objects
+
+console.log(myCompany.race);
+console.log(myCompany.sex);
+
+/*
+    Shorthand properties simplify the process of creating objects, 
+    especially when you want to use variable or function parameter 
+    values as property values.
+
+    This syntax allows us to use the variable name as the property 
+    name and its value as the property value.
+*/
