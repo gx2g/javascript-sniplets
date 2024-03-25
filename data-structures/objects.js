@@ -15,8 +15,9 @@ Each key also known as a property has an associated value
 
 const person = {
     name: "Bob",
-    age: 48,
+    age: 33,
     isStudent: false
+    
 }
 
 /*
@@ -51,16 +52,15 @@ const classicCar = {
     model: "Chevy",
     year: 1954,
     engine: "250 Inline 6",
-    category: ["lowrider classic", "sunday cruiser"],
+    category: ["lowrider classic", "sunday cruiser", 345, false],
     "type@": "car",
-    _tires: "white walls"
-
+    _tires: "white walls",
 };
 
 
 /*
 . notation is most common way to access
-[] square brackets is another way, his syntax involves 
+[] square brackets is another way, this syntax involves 
 specifying the object's name, followed by square brackets 
 with the property name as a string inside them.
 
@@ -75,8 +75,10 @@ helpful when dealing with more complex data.
 
 console.log(classicCar.make);
 console.log(classicCar["type@"]);
+console.log(typeof(classicCar.category)); // testing different data types in array
 console.log(classicCar._tires);
 console.log(classicCar["miles"]);
+
 /*
 
 Nested Properties
@@ -95,8 +97,7 @@ const computer = {
     owner: {
         name: "Rob",
         username:"Robster123",
-
-    }
+    },
 };
 
 console.log(computer.brand);
@@ -105,7 +106,9 @@ console.log(computer.specifications.processor);
 
 /*
 
-Create a JavaScript object called informationCard representing basic personal information. Inside this object, include a nested object with contact details, such as a home address and phone number. The object should have the following structure:
+Create a JavaScript object called informationCard representing basic personal information. 
+Inside this object, include a nested object with contact details, such as a home address 
+and phone number. The object should have the following structure:
 
 Information card (outer object):
 
@@ -131,12 +134,12 @@ const informationCard = {
   };
 
 
-  /*
+/*
   
   access using . dot noation as well as [] square bracket notation 
   to display nested data.
   
-  */
+*/
 
 
   const userShippingInfo = {
@@ -184,7 +187,7 @@ Practice accessing object properties
   console.log(userAge); // person's age
   
   // Task 4
-  console.log(user.preferences.music); // music genre
+  console.log(user.preferences.music); // music value = jazz
   
 
   /*
