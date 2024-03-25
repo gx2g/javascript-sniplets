@@ -115,11 +115,14 @@ Information card (outer object):
 First Name (e.g., "Alice");
 Last Name (e.g., "Smith");
 Age (e.g., 25);
-Contact Details (nested object)
-Contact Details (nested object):
 
-Home Address (e.g., "123 Main St, Apt 4B");
-Phone Number (e.g., "555-123-4567");
+Clearance Details (nested object):
+  Access Level (e.g., "Secure level 2 Only")
+  Department (e.g., "Cyber Systems")
+
+Contact Details (nested object):
+  Home Address (e.g., "123 Main St, Apt 4B")
+  Phone Number (e.g., "555-123-4567")
 
 */
 
@@ -127,12 +130,17 @@ const informationCard = {
     firstName: "Alice",
     lastName: "Smith",
     age: 25,
+    clearanceDetials: {
+      AccessLevel: "Secure level 2 Only",
+      department: "Cyber Systems",
+    },
     contactDetails: {
       homeAddress: "123 Main St, Apt 48",
       phoneNumber: "555-123-4567",
     },
   };
 
+console.log("informationCard contact #: " + informationCard.contactDetails.phoneNumber);
 
 /*
   
@@ -155,8 +163,8 @@ const informationCard = {
     },
   };
 
-  console.log(userShippingInfo.address.postalCode); // dot notation
-  console.log(userShippingInfo["address"]["postalCode"]); // square notation
+  console.log("userShippingInfo postalCode is: " + userShippingInfo.address.postalCode); // dot notation
+  console.log("userShippingINfo Home #: " + userShippingInfo["phoneNumbers"]["home"]); // square notation
   
 /* 
 
@@ -202,7 +210,7 @@ Practice accessing object properties
 // Modifying Property Values
 
 
-const race = "Hispanic";
+const race = "Native American"
 const sex = "Male";
 
 myCompany = {
@@ -219,16 +227,17 @@ myCompany = {
 };
 
 myCompany.title = "Code Bobby"; // modifying object property
-console.log(myCompany.title);
-myCompany.industry = "Engineer"; // modifying object property
-console.log(myCompany.industry);
+console.log(myCompany.title); // Output: Code Bobby
+
+myCompany.industry = "Retail"; // modifying object property
+console.log(myCompany.industry); // Ooutput: Retail
 
 console.log(typeof(myCompany.founded.year));
 
 // Adding Property Values
 
 myCompany.founder = "Bob Fuegos";
-console.log(myCompany.founder);
+console.log(myCompany.founder); // Output: Bob Fuegos
 
 // Short hand code for adding values to objects
 
