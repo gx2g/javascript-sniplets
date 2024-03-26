@@ -298,8 +298,8 @@ console.log(complexObject.hobbies[1]); // Output: Coding
 
 // Iterating over friends
 complexObject.friends.forEach(
-  function(friend) {
-    console.log(friend.name + " is " + friend.age + " years old.");
+  function(myfriend) {
+    console.log(myfriend.name + " is " + myfriend.age + " years old.");
   }
 );
 
