@@ -16,7 +16,8 @@ Each key also known as a property has an associated value
 const person = {
     name: "Bob",
     age: 33,
-    isStudent: false
+    student: true,
+    "transfer": false, // key property wrapped with " " rules apply
     
 }
 
@@ -26,7 +27,7 @@ Keys are strings and the value can be any valid js data type
 
 */
 
-console.log("Hi, my name is " + person.name);
+console.log("Hi, my name is " + person.name); // dot notation
 
 /*
 
@@ -55,11 +56,13 @@ const classicCar = {
     category: ["lowrider classic", "sunday cruiser", 345, false],
     "type@": "car",
     _tires: "white walls",
+    $sound: "WiFi, Samsung XRT39100"
 };
 
 
 /*
 . notation is most common way to access
+
 [] square brackets is another way, this syntax involves 
 specifying the object's name, followed by square brackets 
 with the property name as a string inside them.
@@ -136,7 +139,7 @@ const informationCard = {
     },
     contactDetails: {
       homeAddress: "123 Main St, Apt 48",
-      phoneNumber: "555-123-4567",
+      phoneNumber: "555-555-5555",
     },
   };
 
@@ -232,7 +235,7 @@ console.log(myCompany.title); // Output: Code Bobby
 myCompany.industry = "Retail"; // modifying object property
 console.log(myCompany.industry); // Ooutput: Retail
 
-console.log(typeof(myCompany.founded.year));
+console.log("type of value is a " + typeof(myCompany.founded.year));
 
 // Adding Property Values
 
@@ -252,3 +255,53 @@ console.log(myCompany.sex);
     This syntax allows us to use the variable name as the property 
     name and its value as the property value.
 */
+
+
+/*
+
+Create an Object that contains various types of properties:
+
+- Simple properties like name and age.
+- Nested objects like address.
+- Arrays like hobbies and friends.
+- A method greet() which logs a greeting message.
+
+This object demonstrates how you can create complex data structures 
+in JavaScript, combining different types of data and functionalities.
+
+*/
+
+
+const complexObject = {
+  name: "Bob Fuegos",
+  age: 30,
+  address: {
+      street: "123 Main St",
+      city: "Los Angeles",
+      country: "USA"
+  },
+  hobbies: ["reading", "coding", "hiking"],
+  friends: [
+      { name: "Alice", age: 28 },
+      { name: "Sam", age: 32 },
+      { name: "Charlie", age: 35 } // objects nested within an array
+  ],
+  greet: function() {
+      console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+  }
+};
+
+// Accessing properties and invoking methods
+console.log(complexObject.name); // Output: Bob Fuegos
+console.log(complexObject.address.city); // Output: Los Angeles
+console.log(complexObject.hobbies[1]); // Output: Coding
+
+// Iterating over friends
+complexObject.friends.forEach(
+  function(friend) {
+    console.log(friend.name + " is " + friend.age + " years old.");
+  }
+);
+
+// Invoking method
+complexObject.greet(); // Output: Hello, my name is Bob Fuegos and I am 30 years old.
