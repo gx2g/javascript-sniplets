@@ -46,7 +46,7 @@ console.log(motorBike1);
 console.log(createMotorBike("sports bike", "green", 2200, "honda"));
 
 // constructor function
-function createCar(type, model, color, year) {
+function CreateCar(type, model, color, year) {
     this.type = type,
     this.model = model,
     this.color = color,
@@ -54,5 +54,7 @@ function createCar(type, model, color, year) {
 }
 
 // must use new when creating object
-let car1 = new createCar("chevy", "belair", "black", 1954);
+let car1 = new CreateCar("chevy", "belair", "black", 1954);
 console.log(car1);
+console.log(car1.type);
+console.log("my car is a " + car1.type)
