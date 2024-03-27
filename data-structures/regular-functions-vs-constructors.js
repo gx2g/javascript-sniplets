@@ -1,7 +1,6 @@
 /*
 
 Regular Functions vs Constructors
-https://youtu.be/fBpPfPjxOhc?si=7PrJJkBCVbU_Yn5b
 
 */
 
@@ -18,6 +17,13 @@ motorBike.model = 200;
 motorBike.make = "viper";
 
 console.log(motorBike);
+
+
+/*
+
+
+
+*/
 
 
 function createMoterBike(type, color, model, make){
