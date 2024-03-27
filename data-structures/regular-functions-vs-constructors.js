@@ -26,7 +26,7 @@ console.log(motorBike);
 */
 
 
-function createMoterBike(type, color, model, make){
+function createMotorBike(type, color, model, make){
     
     let newMotorBike = {};
     
@@ -39,7 +39,20 @@ function createMoterBike(type, color, model, make){
 
 }
 
-let motorBike1 = createMoterBike("custom", "navy blue", 547, "harley");
+let motorBike1 = createMotorBike("custom", "navy blue", 547, "harley");
 console.log(motorBike1);
 
-console.log(createMoterBike("sports bike", "green", 2200, "honda"));
+// calling createMotorBike with out variable 
+console.log(createMotorBike("sports bike", "green", 2200, "honda"));
+
+// constructor function
+function createCar(type, model, color, year) {
+    this.type = type,
+    this.model = model,
+    this.color = color,
+    this.year = year
+}
+
+// must use new when creating object
+let car1 = new createCar("chevy", "belair", "black", 1954);
+console.log(car1);
