@@ -1,7 +1,31 @@
+//    Regular Functions vs Constructors Functions
+
 /*
+    Is a function an object in javascript?
 
-Regular Functions vs Constructors
+    Yes, in JavaScript, a function is considered an object. 
+    This is because functions in JavaScript have properties 
+    and methods, similar to other objects.
 
+    Here’s a simple example to demonstrate this:
+*/
+
+// Define a function
+function myFunction() {
+    console.log("Functions are objects!");
+}
+     
+// Add a property to the function
+myFunction.message = "adding property to the function like an object.";
+     
+// Call the function
+myFunction(); // Outputs: Functions are objects!
+   
+// Access the property
+console.log(myFunction.message); // Outputs: adding property to the function like an object.
+
+/*
+    Adding Object Properties via inline
 */
 
 let motorBike = {
@@ -11,25 +35,26 @@ let motorBike = {
     make: "Yamaha"
 }
 
+console.log("when I'm feeling chill I ride my " + motorBike.type);
+
+// adding properties inline to the object motorBike
 motorBike.type = "Skooter";
 motorBike.color = "white";
 motorBike.model = 200;
 motorBike.make = "viper";
 
-console.log(motorBike);
-
+console.log("when I'm feeling chill I ride my " + motorBike.type);
+console.log("motorBike is an " + typeof(motorBike));
 
 /*
-
-
-
+    This style can be time consuming if you have a lot of objects to create.
+    This is where functions come in to play and are very handy. 
 */
 
+function createMotorBike(type, color, model, make) {
 
-function createMotorBike(type, color, model, make){
-    
     let newMotorBike = {};
-    
+        
     newMotorBike.type = type;
     newMotorBike.color = color;
     newMotorBike.model = model;
@@ -42,8 +67,8 @@ function createMotorBike(type, color, model, make){
 let motorBike1 = createMotorBike("custom", "navy blue", 547, "harley");
 console.log(motorBike1);
 
-// calling createMotorBike with out variable 
-console.log(createMotorBike("sports bike", "green", 2200, "honda"));
+let motorBike2 = createMotorBike("sports bike", "green", 2200, "honda");
+console.log(motorBike2);
 
 // constructor function
 function CreateCar(type, model, color, year) {
