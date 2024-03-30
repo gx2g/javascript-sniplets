@@ -1,6 +1,14 @@
-// Objects, Functions, Constructors
+/*
 
+Objects, Functions, Constructors
 
+Objects is a concept in JS. It's a generic container with some data.
+Objects contain properties and keys and associated values. 
+
+In JS everything that is not a primitive is an object.
+This includes functions which are basically a special type of Object. 
+
+*/
 
 
 
