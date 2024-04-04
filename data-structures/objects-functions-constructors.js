@@ -12,9 +12,19 @@ This includes functions which are basically a special type of Object.
 
 
 
+function myFunc1(){
+    let score = 3; // local inside function can't return from outside
+    console.log(score); // prints 3 local variable is accessable inside function
+    console.log(myFunc1.score); // prints 5 because it's an inline property
+}
 
+// inline property added to function
+myFunc1.score = 5;
 
+// invoking function
+myFunc1();
 
+console.log("==================================");
 //    Regular Functions vs Constructors Functions
 
 /*
