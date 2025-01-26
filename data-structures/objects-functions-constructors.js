@@ -25,6 +25,7 @@ myFunc1.score = 5;
 myFunc1();
 
 console.log("==================================");
+
 //    Regular Functions vs Constructors Functions
 
 /*
@@ -78,24 +79,37 @@ console.log("motorBike is an " + typeof(motorBike));
     This is where functions come in to play and are very handy. 
 */
 
+// regular function with 4 agruments
 function createMotorBike(type, color, model, make) {
 
+    // creating empty object array
     let newMotorBike = {};
-        
+    // assign inline properties
     newMotorBike.type = type;
     newMotorBike.color = color;
     newMotorBike.model = model;
     newMotorBike.make = make;
 
+    // return results of array back 
     return newMotorBike;
 
 }
 
+// passing arguments to function for object creation
 let motorBike1 = createMotorBike("custom", "navy blue", 547, "harley");
 console.log(motorBike1);
+console.log("MotorBike1 is an " + typeof(motorBike1));
 
 let motorBike2 = createMotorBike("sports bike", "green", 2200, "honda");
 console.log(motorBike2);
+console.log("MotorBike2 is an " + typeof(motorBike2));
+
+
+
+
+console.log("==================================");
+
+
 
 // constructor function
 function CreateCar(type, model, color, year) {
@@ -109,4 +123,4 @@ function CreateCar(type, model, color, year) {
 let car1 = new CreateCar("chevy", "belair", "black", 1954);
 console.log(car1);
 console.log(car1.type);
-console.log("my car is a " + car1.type)
+console.log("my car is a " + car1.type);
