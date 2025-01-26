@@ -21,11 +21,7 @@ const person = {
     
 }
 
-/*
-
-Keys are strings and the value can be any valid js data type
-
-*/
+// Keys are strings and the value can be any valid js data type
 
 console.log("Hi, my name is " + person.name); // dot notation
 
